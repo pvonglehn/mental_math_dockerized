@@ -11,12 +11,16 @@ services:
       - 5432:5432
     volumes:
       - mental_maths_volume:/var/lib/postgresql/data
+    restart:
+      always
   cron:
     build:
       context:
         backup/        
     env_file: 
        .env
+    restart:
+      always
 
 volumes:
   mental_maths_volume:
