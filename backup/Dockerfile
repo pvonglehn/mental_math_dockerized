@@ -1,4 +1,4 @@
-FROM postgres:latest
+FROM postgres:12.9-bullseye
 
 RUN apt-get update && apt-get -y install cron
 RUN apt-get -y install awscli 
